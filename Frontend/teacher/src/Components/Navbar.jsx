@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <header className="header">
       <div className="h-container">
-        <Link to={`/Signup`}>
+        <Link to={`/`}>
           <button className="home">Home</button>
         </Link>
       </div>
@@ -21,7 +21,7 @@ export const Navbar = () => {
         </form>
       </div>
       <div className="h-options">
-        <Link to={`/Signup`}>
+        <Link to={`/signup`}>
           <button className="i">
             <AiOutlineUser />
           </button>
