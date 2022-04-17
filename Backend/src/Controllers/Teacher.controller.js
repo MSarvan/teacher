@@ -38,10 +38,17 @@ router.patch("/:id", async(req, res) => {
         const teach_det = await Teach_mod.findByIdAndUpdate(req.params.id, req.body, {
             new: true
         })
-        .populate({
-            path: "class",
-            select: ["grade", "section", "subject"]
-        }).lean().exec();
+        .lean().exec();
+        return res.status(200).send(teach_det);
+    } catch(err) {
+        return res.status(500).send(err.message);
+    }
+});
+
+router.delete("/:id", async(req, res) => {
+    try {
+        const teach_det = await Teach_mod.findByIdAndDelete(req.params.id)
+        .lean().exec();
         return res.status(200).send(teach_det);
     } catch(err) {
         return res.status(500).send(err.message);
