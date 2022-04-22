@@ -12,9 +12,12 @@ export const Home = () => {
   return (
     <div>
       <Navbar />
-      {showdata.map((e) => {
-          return <h1>{e.name}</h1>
-      })}
+      {showdata.map((e) => (
+          <div key={e._id}>
+            <h1>{e.name}</h1>
+            <p>{e.img}</p>
+          </div>
+      ))}
     </div>
   );
 };
