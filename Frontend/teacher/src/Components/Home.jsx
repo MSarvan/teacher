@@ -14,8 +14,11 @@ export const Home = () => {
       <Navbar />
       {showdata.map((e) => (
           <div key={e._id}>
-            <h1>{e.name}</h1>
             <p>{e.img}</p>
+            <h2>{e.name}</h2>
+            <p>Age: {e.age}</p>
+            <p>Gender: {e.gender}</p>
+            {/* <p>Class: {e.class}</p> */}
           </div>
       ))}
     </div>
