@@ -18,7 +18,7 @@ export const Home = () => {
             <h2>{e.name}</h2>
             <p>Age: {e.age}</p>
             <p>Gender: {e.gender}</p>
-            {/* <p>Class: {e.class}</p> */}
+            {/* <p>Class: {e.class.map((e) => )}</p> */}
           </div>
       ))}
     </div>
