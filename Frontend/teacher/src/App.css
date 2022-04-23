@@ -40,3 +40,9 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.display
+{
+  border: 2px solid grey;
+  border-radius: 5px;
+}
